@@ -13,22 +13,31 @@ import {
     Input
 } from './styles'
 
-const Header = () => {
+const Header = ({autenticado}) => {
   return (
     <Wrapper>
         <Container>
             <Row>
-                <img src={logo} alt="Logo da dio"></img>
+                <img src={logo} alt="Logo da dio"/>
+                {autenticado ? (
+                <>
                 <BuscarInputContainer>
-                    <Input placeholder="Buscar..."></Input>
+                    <Input placeholder='Buscar...'/>
                 </BuscarInputContainer>
-                <Menu>Live code</Menu>
-                <Menu>Global</Menu>
+                    <Menu>Live Code</Menu>
+                    <Menu>Global</Menu>
+                </>
+                ) : null}
             </Row>
             <Row>
-                <MenuRight href="#"></MenuRight>
+                {autenticado ? (
+                    <UserPicture src="https://avatars.githubusercontent.com/u/45184516?v=4"/>
+                ) : (
+                <>
+                <MenuRight href="#">Home</MenuRight>
                 <Button title="Entrar"></Button>
                 <Button title="Cadastrar"></Button>
+                </>)}
             </Row>
         </Container>
     </Wrapper>

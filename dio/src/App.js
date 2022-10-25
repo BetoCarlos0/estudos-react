@@ -7,14 +7,18 @@ import {
 
 import {Home} from './pages/home'
 import {Login} from './pages/login'
+import {Feed} from './pages/feed'
+import { GlobalStyle } from './styles/global';
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <GlobalStyle />
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/feed" element={<Feed></Feed>}></Route>
       </Routes>
     </Router>
   );
