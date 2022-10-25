@@ -1,7 +1,5 @@
 import React from 'react'
-import bannerImage from '../../assets/banner.png'
 import { Card } from '../../components/card';
-import { Button } from '../../components/button';
 import { UserInfo } from '../../components/userInfo';
 
 import { Header } from '../../components/header';
