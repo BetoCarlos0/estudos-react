@@ -1,11 +1,7 @@
-let resultado = 'radar'
+let resultado = 'digital'
 
-function checaPalindromo(entrada) {
-    let result = '';
-    for (let i = 0, j = entrada.length-1; i < entrada.length; i++, j--) {
-        result += entrada[j]        
-    }
-    return (result == entrada) ? true : false;
+function checaPalindromo(entrada){
+    return entrada === entrada.split('').reverse().join('') ? "TRUE":'FALSE'
 }
 
-console.log(checaPalindromo('ana'))
+console.log(checaPalindromo(resultado));

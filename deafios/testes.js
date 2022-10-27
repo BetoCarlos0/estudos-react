@@ -21,6 +21,6 @@ for (let i = n - 1; i > 0; i--) {
             stack.push(-i);
             op = '*';
             break;
+        }
     }
-}
 console.log(stack.reduce((acc, el) => acc + el, 0))
